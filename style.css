@@ -110,9 +110,8 @@ section {
 
 .home .home-slider .swiper-slide {
   overflow: hidden;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   height: 50rem;
-  width: 35rem;
   width: 600px;
   border-radius: 30px;
 }
