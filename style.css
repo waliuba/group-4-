@@ -136,6 +136,7 @@ section {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  animation-duration: 1000;
 }
 
 .heading {
