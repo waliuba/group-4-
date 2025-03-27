@@ -302,8 +302,8 @@ section {
 .box {
   background: #333;
   padding: 25px;
-  width: 300px;
-  height: 500px;  
+  width: 320px;
+  height: 520px;  
   text-align: left;
   color: #fff;
   border-radius: 5px;
@@ -311,6 +311,16 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box:active{
+  transform: scale(1.05);
+  box-shadow: 0px 10px 16px  #2ea8ff ;
+}
+.box:hover {
+  transform: translatey(-15px);
+  box-shadow: 0px 10px 16px  #2ea8ff ;
 }
 
 /* Title Styling */
@@ -363,8 +373,8 @@ section {
   padding: 10px;
   margin: 20px auto 0;  
   font-weight: bold;
-  border: 1px solid black;
-  border-radius: 2px;  
+  border: 0.5px solid black;
+  border-radius: 1px;  
   transition: 0.3s ease-in-out;
   text-decoration: none;
 }
@@ -372,7 +382,7 @@ section {
 .btn:hover {
   background: #2ea8ff;
   color: #fff;
-  border: 1px solid #2ea8ff;
+  border: 0.5px solid #2ea8ff;
 }
 
 .reivew .box {
