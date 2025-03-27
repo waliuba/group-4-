@@ -397,9 +397,9 @@ section {
   border-radius: 0.5rem;
   background: #333;
   padding: 2rem;
-  position: relative;
-  width: 650px;
-}
+  position: relative; 
+  width: 650px; */
+  } 
 
 .reivew .box .fa-quote-right {
   position: absolute;
