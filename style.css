@@ -17,12 +17,8 @@
 }
 
 .navbar{
-  background-color: rgb(87, 66, 66);
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-
+  
+  
 }
 
 nav a {
@@ -54,7 +50,7 @@ section {
   left: 0;
   right: 0;
   z-index: 10000;
-  background: #3f0505;
+  background: #000000;
   
   display: flex;
   align-items: center;
@@ -80,7 +76,8 @@ section {
 } 
 
 .header .navbar a:hover {
-  color: #f30dba;
+  color: #5095bdf6;
+
   letter-spacing: 2px;
 }
 
@@ -139,6 +136,8 @@ section {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  animation-duration: 1000;
+  animation: infinite;
 }
 
 .heading {
