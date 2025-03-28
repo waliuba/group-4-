@@ -16,11 +16,6 @@
   transition: 0.2s linear;
 }
 
-.navbar{
-  
-  
-}
-
 nav a {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -78,7 +73,7 @@ section {
 .header .navbar a:hover {
   color: #5095bdf6;
 
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 
 #menu-bars {
@@ -417,8 +412,9 @@ section {
   background: #333;
   padding: 2rem;
   position: relative; 
-  width: 650px; */
-  } 
+  width: 650px; 
+}
+
 
 .reivew .box .fa-quote-right {
   position: absolute;
@@ -594,4 +590,4 @@ footer {
   .newsletter input {
       margin-bottom: 10px;
   }
-} 
+}
