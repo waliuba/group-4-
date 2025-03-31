@@ -3,6 +3,7 @@
 :root {
   --theme-color: #4fa5d7f6;
   --span-color: #61a5be;
+  --text-color: #000000;
 }
 
 * {
@@ -33,11 +34,13 @@ html {
 }
 
 body {
-  background: #c0bdbd;
+  background: #f9f9f9;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 section {
-  padding: 2rem 9%;
+  padding: 8rem 10%;
 }
 
 .header {
@@ -69,6 +72,7 @@ section {
   color: #f8eded;
   margin-left: 2rem;
   width: 100%;
+  text-transform: capitalize;
 } 
 
 .header .navbar a:hover {
@@ -86,29 +90,34 @@ section {
 
 .home .content {
   text-align: center;
-  padding-top: 6rem;
-  margin: 2rem auto;
-  max-width: 70rem;
+  padding-top: 3rem;
+  margin: 1rem auto;
+  max-width: 75rem;
 }
 
-.home .content h3 {
-  color: #100f0f;
+.home .content h3  {
+  color: var(--text-color);
   font-size: 4.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
-.home .content h3 span {
-  color: var(--theme-color);
+.home .content h2  {
+  color: var(--text-color);
   text-transform: uppercase;
+  font-size: 4.5rem;
+}
+span{
+  color: var(--theme-color);
+  -webkit-text-stroke: .7px #000000;
 }
 
 
 .btn {
   margin-top: 1rem;
+  margin-top: 2.5rem;
   display: inline-block;
   padding: 0.8rem 3rem;
   font-size: 1.7rem;
-  border-radius: 0.5rem;
   background: #0b0a0a;
   color: #fff;
   cursor: pointer;
@@ -118,13 +127,13 @@ section {
 .btn:hover {
   background: var(--theme-color);
   letter-spacing: 2px;
+  color: var(--text-color);
   border-radius: 25px;
-  border: 1px solid var(--theme-color);
+  border: 1px solid #070707;
 }
 
 .home .home-slider .swiper-slide {
   overflow: hidden;
-  /* border-radius: 0.5rem; */
   height: 50rem;
   width: 600px;
   border-radius: 30px;
@@ -141,7 +150,7 @@ section {
 .heading {
   text-align: center;
   padding-bottom: 2rem;
-  color: #0e0c0c;
+  color: var(--text-color);
   text-transform: uppercase;
   font-size: 4rem;
 }
@@ -154,7 +163,8 @@ section {
 .service .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-  gap: 1.5rem;
+  gap: 6rem;
+  bottom: 25px;
 }
 
 .service .box-container .box {
@@ -171,18 +181,18 @@ section {
   border-radius: 50%;
   font-size: 2.5rem;
   background: var(--theme-color);
-  color: #0d0c0c;
+  color: var(--text-color);
 }
 
 .service .box-container .box h3 {
   font-size: 2rem;
-  color: #0f0d0d;
+  color: var(--theme-color);
   padding: 1rem 0;
 }
 
 .service .box-container .box p {
   font-size: 1.4rem;
-  color: #070707;
+  color: var(--theme-color);
   line-height: 1.8;
 }
 
@@ -190,7 +200,11 @@ section {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 5.5rem;
+}
+/* styles all headings in each section */
+.heading{
+  margin-bottom: 65px;
 }
 
 .about .row .image {
@@ -210,12 +224,12 @@ section {
 
 .about .row .content h3 {
   font-size: 3.5rem;
-  color: #2b2222;
+  color: var(--text-color);
 }
 
 .about .row .content p {
   font-size: 1.5rem;
-  color: #262020;
+  color: var(--text-color);
   padding: 1rem 0;
   line-height: 2;
 }
@@ -223,12 +237,12 @@ section {
 .gallery .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-  gap: 1.5rem;
+  gap: 5rem;
 }
 
 .gallery .box-container .box {
   position: relative;
-  border: 1rem solid #333;
+  border: .6rem solid #333;
   border-radius: 0.5rem;
   height: 25rem;
   cursor: pointer;
@@ -236,13 +250,13 @@ section {
 }
 
 .gallery .box-container .box img {
-  height: 100%;
+  height: 190%;
   width: 100%;
-  object-fit: cover;
+  object-fit:contain;
 }
 
 .gallery .box-container .box:hover img {
-  transform: scale(1.1);
+  transform: scale(.9);
   filter: grayscale();
 }
 
@@ -286,9 +300,14 @@ section {
   color: var(--theme-color);
 }
 
+/* media querries */
+@media (max-width: 1080px) {
+  
+}
+
 
 .price {
-  background: white;
+  background: rgb(254, 254, 254);
   color: #fff;
   text-align: center;
   padding: 50px 0;
@@ -301,7 +320,7 @@ section {
 }
 
 .price .heading span {
-  color: #2ea8ff;
+  color: var(--theme-color);
 }
 
 /* Box Container */
@@ -309,20 +328,22 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 3.5rem;
   padding: 20px;
 }
 
 /* Individual Price Cards */
 .box {
-  background: #333;
+  background: #555151;
   padding: 25px;
   width: 320px;
   height: 520px;  
-  text-align: left;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #ffffff;
+  /* -webkit-text-stroke: .9px var(--theme-color); */
+
+  border-radius: 9px;
+  box-shadow: 0px 4px 8px rgba(50, 49, 49, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
@@ -334,7 +355,7 @@ section {
 
 .box:active{
   transform: scale(1.05);
-  box-shadow: 0px 10px 16px  #2ea8ff ;
+  box-shadow: 0px 10px 16px  var(--theme-color) ;
 }
 .box:hover {
   transform: translatey(-15px) ;
@@ -350,8 +371,9 @@ section {
 .box .title {
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
-  background: #2ea8ff;
+  color: #ffffff;
+  background: var(--theme-color);
+  border-radius: 25px;
   padding: 12px;
   text-align: center;
 }
@@ -360,30 +382,35 @@ section {
 .box .amount {
   font-size: 26px;
   font-weight: bold;
-  color: #fff;
+  text-align: center;
+  color: #ffffff;
   margin: 15px 0;
 }
 
 /* List Style with Blue Tick */
 .box ul {
-  list-style: none;
-  padding: 0;
+  list-style:lower-latin;
+  color: var(--theme-color);
+  padding:0 ;
 }
 
 .box ul li {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #ddd;
+  color: #ffffff;
   display: flex;
   align-items: center;
+  text-align: center;
+  list-style: none;
 }
 
 .box ul li::before {
-  content: "\2713";  
+  content: ""; 
+  list-style: none; 
   font-weight: bold;
   margin-right: 10px;
   font-size: 18px;
-  color: #2ea8ff;
+  color: var(--theme-color);
 }
 
 /* Checkout Button */
@@ -392,7 +419,7 @@ section {
   width: 60%;
   text-align: center;
   background: #000;
-  color: #fff;
+  color: #ffffff;
   padding: 12px;
   margin: 20px auto 0;  
   font-weight: bold;
@@ -404,8 +431,8 @@ section {
 
 .btn:hover {
   background: #2ea8ff;
-  color: #fff;
-  border: 1px solid #2ea8ff;
+  color: var(--text-color);
+  border: 1px solid #2ea8ff;
 }
 
 .reivew .box {
@@ -414,6 +441,7 @@ section {
   padding: 2rem;
   position: relative; 
   width: 650px; 
+  height: 350px;
   } 
 
 
@@ -445,8 +473,8 @@ section {
 }
 
 .reivew .box .user span {
-  font-size: 1.5rem;
-  color: #eee;
+  font-size: 2.5rem;
+  color: var(--theme-color);
 }
 
 .reivew .box p {
@@ -513,15 +541,18 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 15px;
 }
 .footer-section {
   flex: 1;
+
   min-width: 250px;
   margin-bottom: 20px;
   bottom: 0;
 }
 .footer-section h2 {
   margin-bottom: 15px;
+  color: var(--theme-color);
 }
 .footer-section p, .footer-section ul {
   font-size: 14px;
@@ -539,11 +570,11 @@ footer {
   transition: 0.3s;
 }
 .footer-section ul li a:hover {
-  color: #00aced;
+  color: var(--theme-color);
 }
 .social-icons a {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 15px;
   transition: 0.3s;
 }
@@ -560,7 +591,7 @@ footer {
   border-radius: 3px;
 }
 .newsletter button {
-  background: #00aced;
+  background: var(--theme-color);
   color: #fff;
   border: none;
   padding: 8px 15px;
@@ -569,7 +600,8 @@ footer {
   transition: 0.3s;
 }
 .newsletter button:hover {
-  background: #0084b4;
+  background: var(--span-color);
+  color: var(--text-color);
 }
 .footer-bottom {
   text-align: center;
@@ -578,6 +610,14 @@ footer {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
+.fot-span span{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  letter-spacing: 3.5px;
+  color: transparent;
+  -webkit-text-stroke: .9px var(--theme-color);
+}
 @media (max-width: 768px) {
   .footer-content {
       flex-direction: column;
@@ -585,6 +625,7 @@ footer {
   }
   .social-icons {
       justify-content: center;
+      font-size: 12px;
   }
   .newsletter form {
       flex-direction: column;
